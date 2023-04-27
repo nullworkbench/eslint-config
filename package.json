@@ -20,7 +20,6 @@
   },
   "author": "nullworkbench",
   "license": "UNLICENSED",
-  "private": "true",
   "bugs": {
     "url": "https://github.com/nullworkbench/eslint-config/issues"
   },
