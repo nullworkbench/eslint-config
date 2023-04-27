@@ -4,11 +4,19 @@
   "description": "nullworkbench's default eslint config.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "eslint . && prettier . --check",
+    "format": "eslint . --fix && prettier . --write"
   },
+  "files": [
+    "index.js",
+    "rules"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nullworkbench/eslint-config.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "author": "nullworkbench",
   "license": "UNLICENSED",
@@ -16,5 +24,18 @@
   "bugs": {
     "url": "https://github.com/nullworkbench/eslint-config/issues"
   },
-  "homepage": "https://github.com/nullworkbench/eslint-config#readme"
+  "homepage": "https://github.com/nullworkbench/eslint-config#readme",
+  "dependencies": {
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0"
+  },
+  "devDependencies": {
+    "@nullworkbench/prettier-config": "^0.0.1",
+    "eslint": "^8.39.0",
+    "prettier": "^2.8.8"
+  }
 }
