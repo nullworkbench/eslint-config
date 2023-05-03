@@ -14,6 +14,10 @@ module.exports = {
         '@typescript-eslint/no-use-before-define': ['off'],
         // 型情報のみのimportはtype修飾子をつけるように
         '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
+        // NOTE: JSのルールを無効化しておく
+        'no-unused-vars': 'off',
+        // 定義済みの未使用変数
+        '@typescript-eslint/no-unused-vars': 'error',
       },
     },
   ],
