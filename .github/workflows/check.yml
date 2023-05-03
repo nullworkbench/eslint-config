@@ -3,6 +3,9 @@ name: Check
 on:
   push:
   workflow_call:
+    secrets:
+      GPR_PUBLISH_TOKEN:
+        required: true
 
 jobs:
   build:
