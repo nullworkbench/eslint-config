@@ -1,6 +1,6 @@
 {
   "name": "@nullworkbench/eslint-config",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "nullworkbench's default eslint config.",
   "main": "index.js",
   "scripts": {
