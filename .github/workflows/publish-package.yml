@@ -21,7 +21,6 @@ jobs:
       contents: write
       packages: write
     env:
-      NODE_AUTH_TOKEN: ${{secrets.GPR_PUBLISH_TOKEN}}
       GITHUB_TOKEN: ${{secrets.GPR_PUBLISH_TOKEN}}
     steps:
       - uses: actions/checkout@v3
@@ -30,4 +29,7 @@ jobs:
           node-version: 18
           registry-url: https://npm.pkg.github.com/
       - run: npm ci
-      - run: npx semantic-release
+      - name: Publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GPR_PUBLISH_TOKEN}}
+        run: npx semantic-release
