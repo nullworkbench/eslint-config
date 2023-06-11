@@ -7,6 +7,15 @@
     "test": "eslint . && prettier . --check",
     "format": "eslint . --fix && prettier . --write"
   },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github"
+    ]
+  },
   "files": [
     "index.js",
     "rules"
@@ -37,6 +46,7 @@
   "devDependencies": {
     "@nullworkbench/prettier-config": "^0.0.1",
     "eslint": "^8.39.0",
-    "prettier": "^2.8.8"
+    "prettier": "^2.8.8",
+    "semantic-release": "^21.0.5"
   }
 }
