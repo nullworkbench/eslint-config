@@ -14,10 +14,6 @@ jobs:
     secrets:
       GPR_PUBLISH_TOKEN: ${{secrets.GPR_PUBLISH_TOKEN}}
 
-  increment-version:
-    needs: check
-    runs-on: ubuntu-latest
-
   publish-gpr:
     needs: check
     runs-on: ubuntu-latest
