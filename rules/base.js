@@ -42,5 +42,7 @@ module.exports = {
         'newlines-between': 'never',
       },
     ],
+    // default export推奨
+    'import/prefer-default-export': 'off',
   },
 };
