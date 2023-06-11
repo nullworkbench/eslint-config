@@ -18,7 +18,7 @@ jobs:
     needs: check
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
       packages: write
     env:
       NODE_AUTH_TOKEN: ${{secrets.GPR_PUBLISH_TOKEN}}
