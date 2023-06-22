@@ -44,5 +44,7 @@ module.exports = {
     ],
     // default export推奨
     'import/prefer-default-export': 'off',
+    // 相対パスによるimportを禁止
+    'no-restricted-imports': ['error', { patterns: ['.*'] }],
   },
 };
