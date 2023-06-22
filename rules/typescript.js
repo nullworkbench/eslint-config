@@ -18,8 +18,6 @@ module.exports = {
         'no-unused-vars': 'off',
         // 定義済みの未使用変数
         '@typescript-eslint/no-unused-vars': 'error',
-        // default export推奨
-        'import/prefer-default-export': 'off',
       },
     },
   ],
