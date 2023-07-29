@@ -3,10 +3,18 @@ module.exports = {
     browser: true,
     es2021: true,
   },
+  parser: '@typescript-eslint/parser',
   parserOptions: {
     sourceType: 'module',
   },
-  extends: ['airbnb', 'prettier'],
+  plugins: ['@typescript-eslint'],
+  extends: [
+    'prettier',
+    'airbnb',
+    'airbnb-typescript',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-requiring-type-checking',
+  ],
   rules: {
     // if文の{}なしを許容
     curly: ['error', 'multi'],
@@ -46,5 +54,16 @@ module.exports = {
     'import/prefer-default-export': 'off',
     // 相対パスによるimportを禁止
     'no-restricted-imports': ['error', { patterns: ['.*'] }],
+    //
+    // ===== TypeScript =====
+    //
+    // 定義前の変数使用
+    '@typescript-eslint/no-use-before-define': ['off'],
+    // 型情報のみのimportはtype修飾子をつけるように
+    '@typescript-eslint/consistent-type-imports': ['error', { prefer: 'type-imports' }],
+    // NOTE: JSのルールを無効化しておく
+    'no-unused-vars': 'off',
+    // 定義済みの未使用変数
+    '@typescript-eslint/no-unused-vars': 'error',
   },
 };
